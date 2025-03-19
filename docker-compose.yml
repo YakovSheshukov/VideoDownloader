@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  bot:
+    build: .
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}  # Токен бота будет браться из переменной окружения
+    volumes:
+      - ./downloads:/app/downloads  # Монтируем папку downloads для сохранения временных файлов
+    restart: always 
